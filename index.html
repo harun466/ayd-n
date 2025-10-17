@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aydın IRMAK | Dijital Kart</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root{
+  --grad1:#ff2a00;
+  --grad2:#ff7a00;
+  --accent:#ff6600;
+  --bg:#fff;
+  --shadow:0 10px 35px rgba(16,24,40,.08);
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background:var(--bg);
+  color:#0f1720;
+}
+
+/* Üst bölüm */
+.hero{
+  position:relative;
+  height:380px;
+  background:linear-gradient(180deg,var(--grad1),var(--grad2));
+  overflow:hidden;
+}
+.wave{
+  position:absolute;left:0;bottom:-1px;width:100%;display:block;
+}
+
+/* logo sol üst */
+.logo{
+  position:absolute;
+  top:20px;left:20px;
+  width:130px;
+}
+.logo img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
+}
+
+/* İsim ve unvan */
+.headText{
+  position:absolute;
+  top:230px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  color:#000;
+}
+.headText h1{
+  font-size:28px;
+  margin:0;
+  font-weight:700;
+}
+.headText p{
+  margin:6px 0 0;
+  font-size:17px;
+  font-weight:500;
+}
+
+/* İkonlar */
+.actions{
+  position:absolute;
+  top:320px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  gap:22px;
+  justify-content:center;
+}
+.action{
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(180deg,#fff 50%,#ffe4d3 100%);
+  display:grid;place-items:center;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
+  cursor:pointer;
+  transition:all .2s ease;
+}
+.action:hover{transform:scale(1.08);}
+.action svg{width:26px;height:26px;fill:var(--grad2)}
+
+/* Alt kart ve içerikler */
+.wrap{max-width:520px;margin:0 auto;padding:0 16px;margin-top:180px}
+.section{
+  background:#fff;border-radius:14px;box-shadow:var(--shadow);
+  padding:12px;margin:16px 0;
+}
+.item{display:flex;align-items:center;gap:12px;padding:10px;cursor:pointer}
+.icon{width:44px;height:44px;border-radius:10px;background:#f8f9fa;
+  display:grid;place-items:center;flex:0 0 auto;}
+.icon svg{width:20px;height:20px;fill:#555}
+.label{font-size:12px;color:var(--muted);margin-bottom:2px}
+.value{font-weight:600;font-size:16px;color:#111}
+.divider{height:1px;background:#eee;margin:0 12px}
+
+/* Takip kısmı */
+.followTitle{font-weight:700;margin:22px 0 12px;color:#111;font-size:18px;}
+.insta{
+  display:flex;align-items:center;justify-content:space-between;
+  text-decoration:none;color:inherit;
+  background:#fff;border-radius:14px;box-shadow:var(--shadow);
+  padding:12px 16px;margin-bottom:20px;transition:all .2s ease;
+}
+.insta:hover{transform:scale(1.02);}
+.insta-left{display:flex;align-items:center;gap:14px}
+.ig-logo img{width:44px;height:44px;border-radius:12px;}
+
+@media(max-width:640px){
+  .headText{top:200px}
+  .actions{top:300px}
+  .logo{top:10px;left:10px;width:90px;}
+}
+</style>
+</head>
+<body>
+
+<!-- Üst degrade -->
+<div class="hero">
+  <div class="logo">
+    <img src="https://serrapalace.com.tr/wp-content/uploads/logo_renkli.png" 
+         alt="Calimera Serra Palace Logo">
+  </div>
+
+  <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,64 C240,100 480,28 720,48 C960,68 1200,116 1440,72 L1440,120 L0,120 Z" fill="#fff"/>
+  </svg>
+
+  <div class="headText">
+    <h1>Aydın IRMAK</h1>
+    <p>Asst. sales Marketing Manager</p>
+  </div>
+
+  <div class="actions">
+    <a class="action" href="tel:+905498004099" title="Cep Telefonu">
+      <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.07 22 2 13.93 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.21.2 2.42.57 3.54a1 1 0 0 1-.24 1.05l-2.2 2.2z"/></svg>
+    </a>
+    <a class="action" href="mailto:sales@serrapalace.com.tr" title="E-posta">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- Alt kart içerik -->
+<main class="wrap">
+
+  <div class="section">
+    <div class="item" onclick="location.href='tel:+905498004099'">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M15.5 1h-8A2.5 2.5 0 0 0 5 3.5v17A2.5 2.5 0 0 0 7.5 23h8A2.5 2.5 0 0 0 18 20.5v-17A2.5 2.5 0 0 0 15.5 1zM11.5 21a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg></div>
+      <div><div class="label">Cep Telefonu</div><div class="value">+90 549 800 40 99</div></div>
+    </div>
+    <div class="divider"></div>
+    <div class="item" onclick="location.href='tel:+905058219358'">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg></div>
+      <div><div class="label">İş Telefonu</div><div class="value">+90 505 821 93 58</div></div>
+    </div>
+  </div>
+
+  <div class="section" onclick="location.href='mailto:sales@serrapalace.com.tr'">
+    <div class="item">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg></div>
+      <div><div class="label">E-posta</div><div class="value">sales@serrapalace.com.tr</div></div>
+    </div>
+  </div>
+
+  <!-- internet sitesi (şık turuncu dünya ikonu) -->
+  <div class="section" onclick="window.open('https://serrapalace.com.tr','_blank')">
+    <div class="item">
+      <div class="icon" style="background:linear-gradient(135deg,#ffe7d1,#ffffff);">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <path fill="#ff7a00" d="M12,2A10,10 0 1,0 22,12A10,10 0 0,0 12,2ZM4.93,8H7.06A15.05,15.05 0 0,1 9,4.9,8.06,8.06 0 0,0 4.93,8ZM4.06,10H7.4A18.59,18.59 0 0,0 7,12a18.59,18.59 0 0,0 .6,2H4.06A7.91,7.91 0 0,1 4,12,7.91,7.91 0 0,1 4.06,10ZM4.93,16H7.06A15.05,15.05 0 0,0 9,19.1,8.06,8.06 0 0,1 4.93,16ZM12,20A15.05,15.05 0 0,1 10,16H14A15.05,15.05 0 0,1 12,20ZM12,4A15.05,15.05 0 0,0 14,8H10A15.05,15.05 0 0,0 12,4ZM8.55,10H15.45A16.79,16.79 0 0,1 16,12A16.79,16.79 0 0,1 15.45,14H8.55A16.79,16.79 0 0,1 8,12A16.79,16.79 0 0,1 8.55,10ZM19.07,8H16.94A15.05,15.05 0 0,0 15,4.9,8.06,8.06 0 0,1 19.07,8ZM19.94,10A7.91,7.91 0 0,1 20,12A7.91,7.91 0 0,1 19.94,14H16.6A18.59,18.59 0 0,0 17,12A18.59,18.59 0 0,0 16.6,10H19.94ZM19.07,16A8.06,8.06 0 0,1 15,19.1,15.05,15.05 0 0,0 16.94,16Z"/>
+        </svg>
+      </div>
+      <div><div class="label">İnternet sitesi</div><div class="value">serrapalace.com.tr</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="item">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21V7a2 2 0 0 1 2-2h5V3a1 1 0 0 1 1-1h7a3 3 0 0 1 3 3v16h-3v-3H6v3H3Z"/></svg></div>
+      <div>
+        <div class="label">Şirket Ünvanı</div>
+        <div class="value">YAŞAR TURİZİM YATIRIMLARI İŞLETMECİLİK A.Ş</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="item">
+      <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
+      <div><div class="label">Adres</div><div class="value">Ada Mevkii, Kızılot Beldesi 07600 Manavgat – Antalya / Türkiye</div></div>
+    </div>
+  </div>
+
+  <p class="followTitle">Beni takip edin</p>
+  <a class="insta" href="https://www.instagram.com/serrapalaceotel/" target="_blank">
+    <div class="insta-left">
+      <div class="ig-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </div>
+      <div>
+        <strong>Instagram</strong><br>
+        <span style="font-size:12px;color:var(--muted)">serrapalaceotel</span>
+      </div>
+    </div>
+    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 12h13.5M13 6l6 6-6 6" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</main>
+</body>
+</html>
